@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'coreapi',
+    'djoser',
     'rest_framework',
     'rest_framework_simplejwt',
     'django_filters',
