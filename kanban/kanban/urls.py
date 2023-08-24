@@ -12,7 +12,6 @@ from kanban.yasg import urlpatterns as doc_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('user.urls')),
     path('api/', include('board.urls')),
 ]
 

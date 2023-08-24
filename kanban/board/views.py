@@ -3,7 +3,7 @@ from django.shortcuts import render
 from rest_framework import mixins
 from rest_framework.viewsets import GenericViewSet
 
-from board.models import Board, Column, Card
+from board.models import Board, Column, Task
 from board.serializers import BoardSerializer, ColumnSerializer, CardSerializer
 
 
@@ -33,5 +33,5 @@ class CardViewSet(mixins.CreateModelMixin,
                         mixins.RetrieveModelMixin,
                         mixins.ListModelMixin,
                         GenericViewSet):
-    queryset = Card.objects.all()
+    queryset = Task.objects.all()
     serializer_class = CardSerializer

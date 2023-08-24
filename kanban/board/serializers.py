@@ -1,12 +1,13 @@
 from rest_framework import serializers
 
-from board.models import Board, Column, Card
+from board.models import Board, Column, Task
 
 
 class BoardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Board
         fields = "__all__"
+        depth = 2
 
 
 class ColumnSerializer(serializers.ModelSerializer):
@@ -17,5 +18,5 @@ class ColumnSerializer(serializers.ModelSerializer):
 
 class CardSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Card
+        model = Task
         fields = "__all__"
