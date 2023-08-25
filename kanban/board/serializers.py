@@ -16,7 +16,10 @@ class ColumnSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class CardSerializer(serializers.ModelSerializer):
+class TaskSerializer(serializers.ModelSerializer):
+    column_id = serializers.IntegerField(required=False)
+    title = serializers.CharField(required=False)
+
     class Meta:
         model = Task
         fields = "__all__"

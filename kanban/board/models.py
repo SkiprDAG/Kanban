@@ -13,6 +13,7 @@ class Board(models.Model):
         return self.name
 
 
+
 class Column(models.Model):
     number = models.IntegerField()
     name = models.CharField(max_length=255)
@@ -22,10 +23,11 @@ class Column(models.Model):
         return self.name
 
 
+
 class Task(models.Model):
     responsible = models.ForeignKey('user.CustomUser', on_delete=models.DO_NOTHING, blank=True, null=True)
-    name = models.CharField(max_length=255)
-    title = models.TextField()
+    title = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
 
     def __str__(self) -> str:
-        return self.name
+        return self.title

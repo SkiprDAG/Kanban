@@ -22,8 +22,8 @@ admin.site.register(Column, ColumnAdmin)
 
 
 class CardAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name',)
-    list_display_links = ('id', 'name',)
-    search_fields = ('name',)
+    list_display = ('id', 'title',)
+    list_display_links = ('id', 'title',)
+    search_fields = ('title',)
 
 admin.site.register(Task, CardAdmin)
